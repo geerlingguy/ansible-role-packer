@@ -1,0 +1,31 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: geerlingguy
+  description: "Packer for Linux"
+  company: "Midwestern Mac, LLC"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 1.8
+  platforms:
+    - name: EL
+      versions:
+      - all
+    - name: Ubuntu
+      versions:
+      - all
+    - name: Debian
+      versions:
+      - all
+  galaxy_tags:
+    - development
+    - system
+    - image
+    - box
+    - virtualbox
+    - vagrant
+    - ami
+    - aws
+    - droplet
+    - packaging
+    - build
