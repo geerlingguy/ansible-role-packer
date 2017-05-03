@@ -12,9 +12,17 @@ None.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    TODO
+    packer_version: "1.0.0"
 
-TODO.
+The Packer version to install.
+
+    packer_arch: "amd64"
+
+The system architecture (e.g. `386` or `amd64`) to use.
+
+    packer_bin_path: /usr/local/bin
+
+The location where the Packer binary will be installed (should be in system `$PATH`).
 
 ## Dependencies
 
