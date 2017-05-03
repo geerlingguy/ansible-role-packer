@@ -19,7 +19,7 @@ script:
   - ${PWD}/tests/test.sh
 
   # Test running Packer.
-  - 'docker exec --tty ${container_id} env TERM=xterm packer'
+  - 'docker exec --tty ${container_id} env TERM=xterm packer --version'
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
