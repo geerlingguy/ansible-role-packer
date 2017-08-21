@@ -12,7 +12,7 @@ None.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    packer_version: "1.0.0"
+    packer_version: "1.0.4"
 
 The Packer version to install.
 
@@ -32,7 +32,7 @@ None.
 
     - hosts: servers
       roles:
-        - geerlingguy.packer
+        - geerlingguy.ansible-role-packer
 
 ## License
 
