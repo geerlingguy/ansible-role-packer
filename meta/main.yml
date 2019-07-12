@@ -3,6 +3,7 @@ dependencies: []
 
 galaxy_info:
   author: geerlingguy
+  role_name: packer
   description: "Packer for Linux"
   company: "Midwestern Mac, LLC"
   license: "license (BSD, MIT)"
