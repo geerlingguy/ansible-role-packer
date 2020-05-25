@@ -2,9 +2,40 @@
 - name: Ensure unzip is installed.
   package: name=unzip state=present
 
+- name: Remove previous Packer installation(s)
+  block:
+    - name: Find packer binaries in packer bin path
+      find:
+        path: "{{ packer_bin_path }}"
+        patterns: "packer_*"
+      register: found_binaries
+    - name: Remove binaries
+      file:
+        path: "{{ item }}"
+        state: absent
+      loop: "{{ found_binaries.files }}"
+  when: packer_purge and packer_update_symlink
+
 - name: Download and unarchive Packer.
   unarchive:
     src: https://releases.hashicorp.com/packer/{{ packer_version }}/packer_{{ packer_version }}_linux_{{ packer_arch }}.zip
-    dest: "{{ packer_bin_path }}"
+    dest: "{{ packer_tmp_dir }}"
+    creates: "{{ packer_bin_path }}/packer_{{ packer_version }}"
     remote_src: true
-    creates: "{{ packer_bin_path }}/packer"
+
+- name: Install binary
+  copy:
+    src: "{{ packer_tmp_dir }}/packer"
+    dest: "{{ packer_bin_path }}/packer_{{ packer_version }}"
+    remote_src: yes
+    mode: 0755
+
+- name: Create/Update Symlink
+  file:
+    state: link
+    dest: "{{ packer_bin_path }}/packer"
+    src: "{{ packer_bin_path }}/packer_{{ packer_version }}"
+    force: yes
+    mode: 0755
+  when: packer_update_symlink
+...
