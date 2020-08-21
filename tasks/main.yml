@@ -8,3 +8,4 @@
     dest: "{{ packer_bin_path }}"
     remote_src: true
     creates: "{{ packer_bin_path }}/packer"
+    mode: 0755
