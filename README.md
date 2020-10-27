@@ -1,6 +1,6 @@
 # Ansible Role: Packer
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-packer.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-packer)
+[![Build Status](https://travis-ci.com/geerlingguy/ansible-role-packer.svg?branch=master)](https://travis-ci.com/geerlingguy/ansible-role-packer)
 
 Installs [Packer](https://www.packer.io), a Go-based image and box builder.
 
