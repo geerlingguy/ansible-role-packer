@@ -12,7 +12,7 @@ None.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    packer_version: "1.0.0"
+    packer_version: "1.8.6"
 
 The Packer version to install.
 
@@ -23,6 +23,11 @@ The system architecture (e.g. `386` or `amd64`) to use.
     packer_bin_path: /usr/local/bin
 
 The location where the Packer binary will be installed (should be in system `$PATH`).
+
+    packer_repo_path: https://releases.hashicorp.com/
+
+The URL repository  where the Packer release can be downloaded from.
+
 
 ## Dependencies
 

@@ -1,4 +1,5 @@
 ---
-packer_version: "1.0.0"
+packer_version: "1.8.6"
 packer_arch: "amd64"
 packer_bin_path: /usr/local/bin
+packer_repo_path: "https://releases.hashicorp.com"

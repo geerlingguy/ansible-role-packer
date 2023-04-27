@@ -4,7 +4,7 @@
 
 - name: Download and unarchive Packer.
   unarchive:
-    src: https://releases.hashicorp.com/packer/{{ packer_version }}/packer_{{ packer_version }}_linux_{{ packer_arch }}.zip
+    src: "{{ packer_repo_path }}/packer/{{ packer_version }}/packer_{{ packer_version }}_linux_{{ packer_arch }}.zip"
     dest: "{{ packer_bin_path }}"
     remote_src: true
     creates: "{{ packer_bin_path }}/packer"
