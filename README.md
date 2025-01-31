@@ -1,6 +1,6 @@
 # Ansible Role: Packer
 
-[![CI](https://github.com/geerlingguy/ansible-role-packer/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-packer/actions?query=workflow%3ACI)
+[![CI](https://github.com/geerlingguy/ansible-role-packer/actions/workflows/ci.yml/badge.svg)](https://github.com/geerlingguy/ansible-role-packer/actions/workflows/ci.yml)
 
 Installs [Packer](https://www.packer.io), a Go-based image and box builder.
 
